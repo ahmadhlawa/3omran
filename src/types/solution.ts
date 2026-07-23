@@ -1,11 +1,23 @@
-export type UrbanSolution = {
-  id: number;
+export type SolutionCategory =
+  | 'الكل'
+  | 'الأرصفة'
+  | 'الإنارة العامة'
+  | 'واجهات الأحياء'
+  | 'تنظيم الشوارع'
+  | 'مداخل البلدات'
+  | 'الفراغات العامة'
+  | 'تصريف المياه';
+
+export interface UrbanSolution {
+  id: string;
   title: string;
-  category: string;
+  category: Exclude<SolutionCategory, 'الكل'>;
+  problem: string;
+  proposal: string;
+  impact: string;
   beforeImage: string;
   beforeAlt: string;
   afterImage: string;
   afterAlt: string;
-  solution: string;
-  videoUrl: string;
-};
+  videoUrl: string | null;
+}

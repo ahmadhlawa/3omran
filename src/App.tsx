@@ -1,30 +1,26 @@
-import React from 'react';
-import { Navbar } from './components/Navbar';
-import { HeroSection } from './components/HeroSection';
-import { SolutionsSection } from './components/SolutionsSection';
-import { CommunitySection } from './components/CommunitySection';
-import { Footer } from './components/Footer';
+import { CommunitySection } from './components/home/CommunitySection';
+import { HeroSection } from './components/home/HeroSection';
+import { MissionSection } from './components/home/MissionSection';
+import { SocialSection } from './components/home/SocialSection';
+import { SolutionsSection } from './components/home/SolutionsSection';
+import { Footer } from './components/layout/Footer';
+import { Header } from './components/layout/Header';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-['Tajawal',sans-serif] flex flex-col antialiased selection:bg-[#10B981] selection:text-white">
-      {/* Top Header Navigation */}
-      <Navbar />
-
-      {/* Main Content Sections */}
-      <main className="flex-1">
-        {/* 1. Hero Section */}
+    <>
+      <a className="skip-link" href="#main-content">
+        انتقل إلى المحتوى
+      </a>
+      <Header />
+      <main id="main-content">
         <HeroSection />
-
-        {/* 2. Interactive Solutions Grid Section */}
+        <MissionSection />
         <SolutionsSection />
-
-        {/* 3. Community Call to Action Section */}
         <CommunitySection />
+        <SocialSection />
       </main>
-
-      {/* Footer */}
       <Footer />
-    </div>
+    </>
   );
 }

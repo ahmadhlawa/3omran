@@ -1,6 +1,6 @@
 {
   "name": "حلول عمرانية ذكية",
-  "description": "منصة هندسية ومعمارية فلسطينية لتقديم مقترحات بصرية واقعية لتطوير المشاكل العمرانية بالشوارع والأحياء باستخدام الذكاء الاصطناعي.",
+  "description": "منصة تحريرية عربية توثّق مشكلات عمرانية فلسطينية وتعرض تصورات معمارية بصرية أولية.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

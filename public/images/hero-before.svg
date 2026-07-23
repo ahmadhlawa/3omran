@@ -1,32 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="800" height="500" fill="url(#bgGrad)"/>
-  <rect width="800" height="500" fill="url(#grid)"/>
-  
-  <!-- Damaged Sidewalk Illustration -->
-  <path d="M 0,350 L 800,350 L 800,500 L 0,500 Z" fill="#334155"/>
-  <path d="M 50,350 L 120,380 L 250,350 L 300,420 L 400,350" fill="none" stroke="#e67e22" stroke-width="4" stroke-dasharray="8,8"/>
-  <circle cx="180" cy="390" r="15" fill="#e67e22" opacity="0.3"/>
-  <circle cx="450" cy="380" r="25" fill="#e67e22" opacity="0.3"/>
-  
-  <!-- Buildings -->
-  <rect x="80" y="150" width="180" height="200" fill="#475569" rx="4"/>
-  <rect x="300" y="100" width="220" height="250" fill="#334155" rx="4"/>
-  <rect x="560" y="180" width="160" height="170" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-  
-  <!-- Obstacles -->
-  <rect x="220" y="320" width="40" height="50" fill="#78350f" rx="2"/>
-  <rect x="500" y="330" width="60" height="40" fill="#991b1b" rx="2"/>
-
-  <!-- Problem Badge -->
-  <rect x="30" y="30" width="120" height="40" rx="20" fill="#e67e22"/>
-  <text x="90" y="55" fill="#0f172a" font-family="Tajawal, sans-serif" font-size="18" font-weight="900" text-anchor="middle">قبل - عشوائية</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">رسم توضيحي للوضع الحالي</title>
+  <desc id="description">شارع محلي برصيف متقطع وعوائق ومركبات متوقفة</desc>
+  <rect width="1200" height="800" fill="#ded7ca"/>
+  <rect width="1200" height="310" fill="#eee9df"/>
+  <path d="M0 310h1200v230H0z" fill="#c7bba8"/>
+  <path d="M0 540h1200v260H0z" fill="#727473"/>
+  <path d="M0 540h1200v48H0z" fill="#b8aa95"/>
+  <path d="M0 590h1200" stroke="#d8d1c6" stroke-width="5" stroke-dasharray="58 54"/>
+  <g fill="#a7957c" stroke="#756955" stroke-width="4">
+    <path d="M40 165h240v375H40z"/>
+    <path d="M310 95h300v445H310z"/>
+    <path d="M650 190h210v350H650z"/>
+    <path d="M885 125h275v415H885z"/>
+  </g>
+  <g fill="#675e51">
+    <rect x="86" y="235" width="58" height="76"/>
+    <rect x="174" y="235" width="58" height="76"/>
+    <rect x="370" y="170" width="70" height="86"/>
+    <rect x="476" y="170" width="70" height="86"/>
+    <rect x="703" y="260" width="74" height="92"/>
+    <rect x="952" y="202" width="62" height="82"/>
+    <rect x="1050" y="202" width="62" height="82"/>
+  </g>
+  <path d="M0 540l190 0 45-28 135 28 120-18 115 18 185-32 160 32h250v48H0z" fill="#91816c"/>
+  <g fill="#8f4b37">
+    <rect x="238" y="500" width="70" height="58"/>
+    <rect x="580" y="486" width="86" height="72"/>
+  </g>
+  <g fill="#39474c">
+    <path d="M760 535h178l42 46H720z"/>
+    <circle cx="770" cy="579" r="27" fill="#252d30"/>
+    <circle cx="929" cy="579" r="27" fill="#252d30"/>
+  </g>
+  <path d="M0 590h1200" stroke="#9b4d37" stroke-width="7" stroke-dasharray="20 18" opacity=".8"/>
 </svg>

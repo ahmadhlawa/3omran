@@ -1,103 +1,127 @@
-import { UrbanSolution } from '../types/solution';
-
-export const URBAN_SOLUTIONS: UrbanSolution[] = [
-  {
-    id: 1,
-    title: "رصيف متضرر وغير صالح للمشاة",
-    category: "الأرصفة",
-    beforeImage: "/images/solutions/sidewalk-before.webp",
-    beforeAlt: "رصيف متضرر ومليء بالعوائق والمواد التالفة في حارة محلية",
-    afterImage: "/images/solutions/sidewalk-after.webp",
-    afterAlt: "رصيف معاد تنظيمه مع مسار مشاة آمن وأحواض شجرية محلية",
-    solution: "إعادة تنظيم الرصيف باستخدام مواد محلية، وإزالة العوائق، وإضافة مسار آمن وواضح للمشاة.",
-    videoUrl: "https://example.com/video-placeholder"
-  },
-  {
-    id: 2,
-    title: "شارع سكني يفتقر إلى الإنارة",
-    category: "الإنارة العامة",
-    beforeImage: "/images/solutions/lighting-before.webp",
-    beforeAlt: "شارع فرعي مظلم في المساء يفتقر للإنارة الكافية لسلامة المشاة",
-    afterImage: "/images/solutions/lighting-after.webp",
-    afterAlt: "شارع مضاء بوحدات إنارة حديثة بالطاقة الشمسية مع تحسين المظهر العمراني",
-    solution: "إضافة وحدات إنارة موفرة للطاقة وتوزيعها بطريقة تقلل المناطق المظلمة وتحسن سلامة المشاة.",
-    videoUrl: "https://example.com/video-placeholder"
-  },
-  {
-    id: 3,
-    title: "أسوار مرتفعة تعزل المنازل عن الشارع",
-    category: "واجهات الأحياء",
-    beforeImage: "/images/solutions/fences-before.webp",
-    beforeAlt: "جدار خرساني مرتفع ومصمت يعزل المنزل عن المحيط العمراني",
-    afterImage: "/images/solutions/fences-after.webp",
-    afterAlt: "سور منخفض مدمج مع حجر مقدسي ونباتات متسلقة تعزز المشهد الجمالي",
-    solution: "استبدال الأجزاء المصمتة بعناصر أخف وتشجير بسيط يحافظ على الخصوصية ويعزز التواصل البصري.",
-    videoUrl: "https://example.com/video-placeholder"
-  },
-  {
-    id: 4,
-    title: "أكشاك عشوائية تعيق حركة المشاة",
-    category: "تنظيم الشوارع",
-    beforeImage: "/images/solutions/kiosks-before.webp",
-    beforeAlt: "أكشاك تجارية عشوائية تتعدى على ممر المشاة وتسبب ازدحاماً",
-    afterImage: "/images/solutions/kiosks-after.webp",
-    afterAlt: "وحدات بيع موحدة التصميم ومحددة النطاق تضمن استمرارية الممر",
-    solution: "إنشاء وحدات بيع موحدة ومحددة المواقع تحافظ على مصدر الرزق دون تعطيل الرصيف أو الشارع.",
-    videoUrl: "https://example.com/video-placeholder"
-  },
-  {
-    id: 5,
-    title: "مدخل حي غير واضح وغير منظم",
-    category: "مداخل البلدات",
-    beforeImage: "/images/solutions/entrance-before.webp",
-    beforeAlt: "تقاطع مدخل بلدة يفتقر إلى العنونة والافتات التنظيمية والجماليات",
-    afterImage: "/images/solutions/entrance-after.webp",
-    afterAlt: "مدخل بلدة مصمم بلافتة ترحيبية حجرية وتنسيق زراعي وزيتون محلي",
-    solution: "تصميم مدخل واضح باستخدام تشجير محلي، وإضاءة، ولافتة تعريفية تعكس هوية المكان.",
-    videoUrl: "https://example.com/video-placeholder"
-  },
-  {
-    id: 6,
-    title: "مساحة مهملة يمكن تحويلها إلى مكان عام",
-    category: "الفراغات العامة",
-    beforeImage: "/images/solutions/space-before.webp",
-    beforeAlt: "أرض مهملة في وسط الحي تتجمع فيها النفايات والأتربة",
-    afterImage: "/images/solutions/space-after.webp",
-    afterAlt: "حديقة جيبية صغيرة مع مقاعد خشبية ومظلة ومساحة لعب آمنة للأطفال",
-    solution: "تحويل المساحة إلى منطقة جلوس صغيرة وآمنة باستخدام مظلات وتشجير ومقاعد منخفضة التكلفة.",
-    videoUrl: "https://example.com/video-placeholder"
-  },
-  {
-    id: 7,
-    title: "تجمع مياه الأمطار في تقاطع سكني",
-    category: "تصريف المياه",
-    beforeImage: "/images/solutions/drainage-before.webp",
-    beforeAlt: "تجمع كبير لمياه الأمطار يقطع الطريق أمام المشاة والسيارات",
-    afterImage: "/images/solutions/drainage-after.webp",
-    afterAlt: "مجرى تصريف حيوي مع حوض تجميع نباتي يغذي المياه الجوفية",
-    solution: "إنشاء مسارات حيوية لتصريف المياه واستغلالها في ري الأحواض الزراعية المجاورة للشارع.",
-    videoUrl: "https://example.com/video-placeholder"
-  },
-  {
-    id: 8,
-    title: "مواقف سيارات عشوائية في ساحة البلدة",
-    category: "تنظيم الشوارع",
-    beforeImage: "/images/solutions/parking-before.webp",
-    beforeAlt: "سيارات متوقفة بشكل عشوائي تلغي المساحة المخصصة للناس",
-    afterImage: "/images/solutions/parking-after.webp",
-    afterAlt: "تحديد مسارات السيارات وإعادة الساحة المركزية للمشاة والأنشطة الاجتماعية",
-    solution: "إعادة توزيع مواقف السيارات في أطراف الساحة وتهيئة المساحة المركزية للأنشطة الاجتماعية والمشاة.",
-    videoUrl: "https://example.com/video-placeholder"
-  }
-];
+import type { SolutionCategory, UrbanSolution } from '../types/solution';
 
 export const CATEGORIES = [
-  "الكل",
-  "الأرصفة",
-  "الإنارة العامة",
-  "واجهات الأحياء",
-  "تنظيم الشوارع",
-  "مداخل البلدات",
-  "الفراغات العامة",
-  "تصريف المياه"
-];
+  'الكل',
+  'الأرصفة',
+  'الإنارة العامة',
+  'واجهات الأحياء',
+  'تنظيم الشوارع',
+  'مداخل البلدات',
+  'الفراغات العامة',
+  'تصريف المياه',
+] as const satisfies readonly SolutionCategory[];
+
+export const URBAN_SOLUTIONS = [
+  {
+    id: 'sidewalk',
+    title: 'رصيف آمن بدل مسار متقطّع',
+    category: 'الأرصفة',
+    problem: 'عوائق وتلف في سطح الرصيف يدفعان المشاة إلى الشارع.',
+    proposal:
+      'تصور أولي لمسار متصل وواضح، مع إزالة العوائق وإضافة أحواض زراعة محلية.',
+    impact: 'حركة يومية أكثر أماناً ووضوحاً لكبار السن والأطفال.',
+    beforeImage: '/images/solutions/sidewalk-before.webp',
+    beforeAlt: 'رصيف متضرر تتوزع عليه عوائق في حارة فلسطينية',
+    afterImage: '/images/solutions/sidewalk-after.webp',
+    afterAlt: 'تصور بصري لرصيف متصل مع مسار مشاة وأحواض زراعة',
+    videoUrl: null,
+  },
+  {
+    id: 'lighting',
+    title: 'ضوء أوضح لشارع سكني',
+    category: 'الإنارة العامة',
+    problem: 'إنارة متقطعة تترك أجزاء من الطريق والممرات في الظلام.',
+    proposal:
+      'معالجة بصرية لتوزيع وحدات إنارة مقتصدة بالطاقة على نقاط الحركة الفعلية.',
+    impact: 'رؤية أفضل للمشاة والسائقين من دون إفراط في الإضاءة.',
+    beforeImage: '/images/solutions/lighting-before.webp',
+    beforeAlt: 'شارع سكني فلسطيني ضعيف الإنارة ليلاً',
+    afterImage: '/images/solutions/lighting-after.webp',
+    afterAlt: 'تصور بصري لشارع بإنارة موزعة على مسار المشاة',
+    videoUrl: null,
+  },
+  {
+    id: 'fences',
+    title: 'واجهة تحمي الخصوصية وتخاطب الشارع',
+    category: 'واجهات الأحياء',
+    problem: 'أسوار مصمتة ومرتفعة تجعل واجهة الحي مغلقة وقاسية.',
+    proposal:
+      'فكرة معمارية تجمع الحجر المحلي والفتحات المحسوبة والزراعة المتسلقة.',
+    impact: 'خصوصية محفوظة وواجهة أكثر إنسانية في الوقت نفسه.',
+    beforeImage: '/images/solutions/fences-before.webp',
+    beforeAlt: 'سور خرساني مصمت يفصل منزلاً عن الشارع',
+    afterImage: '/images/solutions/fences-after.webp',
+    afterAlt: 'تصور أولي لسور حجري أخف مع نباتات محلية',
+    videoUrl: null,
+  },
+  {
+    id: 'kiosks',
+    title: 'تنظيم الأكشاك من دون قطع الرصيف',
+    category: 'تنظيم الشوارع',
+    problem: 'وحدات بيع غير منظمة تضيق ممر المشاة وتزيد الازدحام.',
+    proposal:
+      'تصور لوحدات محددة المساحة والموقع تحافظ على الرزق واستمرارية الممر.',
+    impact: 'رصيف قابل للاستخدام ونشاط تجاري أوضح وأكثر عدلاً.',
+    beforeImage: '/images/solutions/kiosks-before.webp',
+    beforeAlt: 'أكشاك متفرقة تعيق مسار المشاة على الرصيف',
+    afterImage: '/images/solutions/kiosks-after.webp',
+    afterAlt: 'تصور لوحدات بيع منظمة تترك مسار المشاة مفتوحاً',
+    videoUrl: null,
+  },
+  {
+    id: 'entrance',
+    title: 'مدخل يعلن هوية البلدة بهدوء',
+    category: 'مداخل البلدات',
+    problem: 'تقاطع غير واضح يفتقر إلى العنونة وتسلسل الحركة.',
+    proposal:
+      'مقترح أولي للافتة حجرية، تشجير محلي، وإضاءة تحدد نقطة الوصول.',
+    impact: 'اتجاه أوضح وحضور بصري مرتبط بمواد المكان.',
+    beforeImage: '/images/solutions/entrance-before.webp',
+    beforeAlt: 'مدخل بلدة غير واضح من دون عناصر تعريفية',
+    afterImage: '/images/solutions/entrance-after.webp',
+    afterAlt: 'تصور لمدخل بلدة بحجر محلي وزيتون ولافتة واضحة',
+    videoUrl: null,
+  },
+  {
+    id: 'space',
+    title: 'مساحة صغيرة تعود إلى أهل الحي',
+    category: 'الفراغات العامة',
+    problem: 'قطعة أرض مهملة تتجمع فيها الأتربة والنفايات.',
+    proposal:
+      'معالجة بصرية لحديقة جيبية بسيطة فيها ظل ومقاعد ومساحة لعب محدودة.',
+    impact: 'مكان يومي قريب للجلوس واللقاء واللعب.',
+    beforeImage: '/images/solutions/space-before.webp',
+    beforeAlt: 'قطعة أرض مهملة بين مباني الحي',
+    afterImage: '/images/solutions/space-after.webp',
+    afterAlt: 'تصور لحديقة جيبية بمقاعد وظل وزراعة قليلة الري',
+    videoUrl: null,
+  },
+  {
+    id: 'drainage',
+    title: 'مياه المطر جزء من تصميم الشارع',
+    category: 'تصريف المياه',
+    problem: 'تجمع المياه يقطع الطريق ويضر سطحه عند كل منخفض.',
+    proposal:
+      'فكرة أولية لمسارات تصريف وأحواض نباتية تبطئ الجريان وتجمع المياه.',
+    impact: 'مرور أسهل واستفادة أفضل من مياه الموسم.',
+    beforeImage: '/images/solutions/drainage-before.webp',
+    beforeAlt: 'مياه أمطار متجمعة عند تقاطع سكني',
+    afterImage: '/images/solutions/drainage-after.webp',
+    afterAlt: 'تصور لمسار تصريف وحوض نباتي بمحاذاة الطريق',
+    videoUrl: null,
+  },
+  {
+    id: 'parking',
+    title: 'ساحة للناس لا للمركبات فقط',
+    category: 'تنظيم الشوارع',
+    problem: 'وقوف عشوائي يلغي مساحة المشاة والنشاط الاجتماعي.',
+    proposal:
+      'تصور يعيد المواقف إلى الأطراف ويحدد قلب الساحة للحركة والجلوس.',
+    impact: 'مركز بلدة قابل للاستخدام اليومي والمناسبات.',
+    beforeImage: '/images/solutions/parking-before.webp',
+    beforeAlt: 'سيارات متوقفة عشوائياً في ساحة بلدة',
+    afterImage: '/images/solutions/parking-after.webp',
+    afterAlt: 'تصور لساحة مركزية مفتوحة مع مواقف محددة عند الأطراف',
+    videoUrl: null,
+  },
+] as const satisfies readonly UrbanSolution[];
